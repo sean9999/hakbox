@@ -1,1 +1,5 @@
 build.sh
+vars.sh
+.github/
+.git/
+.gitmodules
