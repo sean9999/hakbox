@@ -1,5 +1,9 @@
 FROM golang:1.22.3
 
+LABEL org.opencontainers.image.source=https://github.com/sean9999/hakbox
+LABEL org.opencontainers.image.description="a box for hacking"
+LABEL org.opencontainers.image.licenses=MIT
+
 #	utils
 RUN apt update
 RUN apt upgrade -y
