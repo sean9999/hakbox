@@ -11,9 +11,9 @@ RUN apt install -y build-essential fortune neovim tree curl wget htop neofetch t
 COPY environment /etc/
 
 #	rust and some nice crates
-RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
-RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
-RUN /root/.cargo/bin/cargo install bat exa
+# RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+# RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
+# RUN /root/.cargo/bin/cargo install bat exa
 
 #	peter, paul, mary
 RUN mkdir -p /root/peter /root/paul
