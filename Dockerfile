@@ -7,13 +7,21 @@ LABEL org.opencontainers.image.licenses=MIT
 #	utils
 RUN apt update
 RUN apt upgrade -y
-RUN apt install -y build-essential fortune neovim tree curl wget htop neofetch tmux less
+RUN apt install -y build-essential fortune neovim tree curl wget htop neofetch tmux less sudo
 COPY environment /etc/
 
-#	rust and some nice crates
+#	tmux
+COPY tmux/plugins /root/.tmux/plugins/tmp
+COPY tmux.conf /root/.tmux.conf
+
+#	reflection
+COPY Dockerfile /root/
+COPY README.md /root/
+
+#	rust
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
-RUN /root/.cargo/bin/cargo install bat exa
+# RUN /root/.cargo/bin/cargo install bat exa
 
 #	peter, paul, mary
 RUN mkdir -p /root/peter /root/paul
