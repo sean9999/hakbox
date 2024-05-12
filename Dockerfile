@@ -9,6 +9,8 @@ RUN apt update
 RUN apt upgrade -y
 RUN apt install -y build-essential fortune neovim tree curl wget htop neofetch tmux less
 COPY environment /etc/
+COPY dot_tmux /root/.tmux
+COPY tmux.conf /root/.tmux.conf
 
 #	rust and some nice crates
 # RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
