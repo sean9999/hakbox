@@ -11,7 +11,7 @@ RUN apt install -y build-essential fortune neovim tree curl wget htop neofetch t
 COPY environment /etc/
 
 #	tmux
-COPY tmux/plugins /root/.tmux/plugins/tmp
+COPY tpm /root/.config/tmux/plugins/tpm
 COPY tmux.conf /root/.tmux.conf
 
 #	reflection
@@ -19,9 +19,9 @@ COPY Dockerfile /root/
 COPY README.md /root/
 
 #	rust
-#RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
-#RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
-# RUN /root/.cargo/bin/cargo install bat exa
+RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
+RUN /root/.cargo/bin/cargo install bat exa
 
 #	peter, paul, mary
 RUN mkdir -p /root/peter /root/paul
