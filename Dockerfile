@@ -19,8 +19,8 @@ COPY Dockerfile /root/
 COPY README.md /root/
 
 #	rust
-RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
-RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
+#RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+#RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
 # RUN /root/.cargo/bin/cargo install bat exa
 
 #	peter, paul, mary
