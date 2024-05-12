@@ -2,5 +2,5 @@
 
 source vars.sh
 
-docker build -t seanbox -t $IMAGE:$TAG
+docker build -t seanbox -t $IMAGE:latest -t $IMAGE:$TAG .
 
