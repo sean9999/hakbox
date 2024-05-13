@@ -1,4 +1,5 @@
 build.sh
+build_mac.sh
 vars.sh
 .github/
 .git/

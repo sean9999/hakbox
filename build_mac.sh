@@ -8,4 +8,3 @@ docker buildx build \
     -t $IMAGE:latest \
     -t $IMAGE:$TAG . \
     --output=type=registry,push=true
-
