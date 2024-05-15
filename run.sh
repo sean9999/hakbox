@@ -2,4 +2,4 @@
 
 source vars.sh
 
-docker push $IMAGE:$TAG
+docker run -it hakbox

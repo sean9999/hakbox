@@ -1,6 +1,9 @@
 build.sh
-build_mac.sh
+build_*.sh
+push.sh
+pull.sh
 vars.sh
 .github/
 .git/
 .gitmodules
+LICENSE
